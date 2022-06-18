@@ -1,6 +1,6 @@
 {
   "name": "faceless",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A github action that deletes issues created by users without avatars",
   "main": "index.js",
   "scripts": {

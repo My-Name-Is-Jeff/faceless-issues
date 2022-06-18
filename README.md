@@ -3,9 +3,11 @@
 This Github Action will label and optionally close issues created by users without profile pictures. This is meant to decrease the amount of low quality submissions in your repository. It is best accompanied by a warning to users, so those that follow the rules will not have their issues closed.
 
 ## Detection methods
+
 We detect users without profile pictures by sending 2 requests:
-1) Their actual profile image, e.g. https://github.com/teamreadme.png
-2) Their default identicon, e.g. https://github.com/identicons/teamreadme.png
+
+1. Their actual profile image, e.g. https://github.com/teamreadme.png
+2. Their default identicon, e.g. https://github.com/identicons/teamreadme.png
 
 and comparing the 2 images. If they match, the issue is labeled and optionally closed.
 
@@ -15,13 +17,18 @@ and comparing the 2 images. If they match, the issue is labeled and optionally c
 
 **Optional** The label to apply to users without a profile picture. Default `"faceless"`.
 
-
 ## `close`
 
 **Optional** Automatically close issues created by users without a profile picture. Default `false`.
 
+## `closeComment`
+
+**Optional** The text to comment when an issue is closed.
+
 ## Example usage
+
 Paste the following into `.github/workflows/faceless-issues.yml`
+
 ```
 on:
   issues:
@@ -39,6 +46,7 @@ jobs:
 ```
 
 ## Inspiration
+
 Thanks to [@davidhemphill](https://twitter.com/davidhemphill) for the [inspiration](https://twitter.com/davidhemphill/status/1534384939449425920)!
 
 ## Deployment notes

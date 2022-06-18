@@ -1,20 +1,24 @@
-name: 'faceless-issues'
-description: 'Automatically label or close issues created by users without Github avatars'
+name: "faceless-issues"
+description: "Automatically label or close issues created by users without Github avatars"
 branding:
   icon: camera-off
   color: purple
 inputs:
-  label: 
-    description: 'Label to add to issue'
+  label:
+    description: "Label to add to issue"
     required: false
-    default: 'faceless'
-  repo-token: 
-    description: 'Github authentication token'
+    default: "faceless"
+  repo-token:
+    description: "Github authentication token"
     required: true
-  close: 
-    description: 'Automatically close the issue'
+  close:
+    description: "Automatically close the issue"
     required: false
     default: false
+  closeComment:
+    description: "What to comment after closing"
+    required: false
+    default: "This issue has been automatically closed by [faceless](https://github.com/teamreadme/faceless) due to being created by a user without an avatar. Please update your github profile picture and recreate this issue."
 runs:
-  using: 'node16'
-  main: 'dist/index.js'
+  using: "node16"
+  main: "dist/index.js"
